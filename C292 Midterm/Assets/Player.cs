@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -34,10 +35,10 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector3(dir * _lrSpeed, rb.velocity.y, 0);
 
         if (dir < 0) {
-            transform.localScale = new Vector3(-1.5f, 1.5f, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         else if(dir > 0) {
-            transform.localScale = new Vector3(1.5f, 1.5f, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
     
@@ -58,7 +59,7 @@ public class Player : MonoBehaviour
 
     void Death() {
         if (GroundPos.position.y < -5) {
-            Destroy(gameObject);
+            SceneManager.LoadScene(0);
         }
     }
 }

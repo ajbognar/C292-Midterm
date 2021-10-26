@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Cheese : MonoBehaviour
+public class Spikes : MonoBehaviour
 {
-
-    private int ratCount = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,16 +19,7 @@ public class Cheese : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.tag.Equals("Player")) {
-            Destroy(collider.gameObject);
-            ratCount = ratCount + 1;
-            if (ratCount >= 3) {
-                LoadNextLevel();
-                ratCount = 0;
-            }
+            SceneManager.LoadScene(0);
         }
-    }
-
-    void LoadNextLevel() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
