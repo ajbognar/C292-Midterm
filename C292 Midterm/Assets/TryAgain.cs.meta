@@ -1,12 +1,10 @@
 fileFormatVersion: 2
-guid: b365e7fa92882a54c8929fbf6ed2c677
+guid: 8d3a2612d2743094fadb2281bdb10c94
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - GroundPos: {instanceID: 0}
-  - _jumpSFX: {instanceID: 0}
-  - _jumpClip: {fileID: 8300000, guid: 51b8574f69d60cb418b6b0d137fd3693, type: 3}
+  - _runtimeData: {fileID: 11400000, guid: 0ab24610d08e3e84a9140586a629acbd, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

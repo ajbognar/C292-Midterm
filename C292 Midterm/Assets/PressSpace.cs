@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Spikes : MonoBehaviour
+public class PressSpace : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        PressStart();
     }
 
-    void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.gameObject.tag.Equals("Player")) {
-            SceneManager.LoadScene("Game Over");
-        }
+    void PressStart() {
+        if (Input.GetKeyDown("space")) {
+            SceneManager.LoadScene("Level1");
+        } 
     }
 }

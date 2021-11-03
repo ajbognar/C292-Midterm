@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Spikes : MonoBehaviour
+public class Restart : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,12 +14,11 @@ public class Spikes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        PressRestart();
     }
 
-    void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.gameObject.tag.Equals("Player")) {
-            SceneManager.LoadScene("Game Over");
-        }
+    void PressRestart() {
+        if (Input.GetKeyDown("space"))
+            SceneManager.LoadScene("Start");
     }
 }

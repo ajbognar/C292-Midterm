@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private bool isGrounded = false;
     private float jumpTimer = 0f;
     // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -59,7 +60,7 @@ public class Player : MonoBehaviour
 
     void Death() {
         if (GroundPos.position.y < -5) {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

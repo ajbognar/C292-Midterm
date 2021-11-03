@@ -24,13 +24,14 @@ public class Cheese : MonoBehaviour
             Destroy(collider.gameObject);
             ratCount = ratCount + 1;
             if (ratCount >= 3) {
-                LoadNextLevel();
                 ratCount = 0;
+                LoadNextLevel();
             }
         }
     }
 
     void LoadNextLevel() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int NextLevel = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(NextLevel);
     }
 }
