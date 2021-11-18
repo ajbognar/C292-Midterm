@@ -6,6 +6,5 @@ using UnityEngine;
 
 public class RuntimeData : ScriptableObject 
 {
-    public float CurrentLevel = 1;
-    
+    public int CurrentLevel = 1;
 }
