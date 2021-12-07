@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Spikes : MonoBehaviour
+public class Spring : MonoBehaviour
 {
+    [SerializeField] float _springPow = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class Spikes : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.tag.Equals("Player")) {
-            SceneManager.LoadScene("GameOver");
+            collider.GetComponent<Rigidbody2D>().velocity = new Vector3(0, _springPow, 0);
         }
     }
 }
